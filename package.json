@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "build": "hs project build",
+    "build": "hs project upload",
     "deploy": "hs project deploy",
     "watch": "hs project watch",
     "test": "jest",
@@ -14,7 +14,12 @@
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix",
-    "clean": "hs project clean",
+    "clean": "rm -rf dist dev",
+    "hs:dev": "hs project dev",
+    "hs:build": "hs project upload",
+    "hs:deploy": "hs project deploy",
+    "hs:watch": "hs project watch",
+    "hs:open": "hs project open",
     "docker:build": "docker build -t hubspot-marketplace-app .",
     "docker:run": "docker run -p 3000:3000 hubspot-marketplace-app",
     "docker:compose": "docker-compose up -d"

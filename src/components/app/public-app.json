@@ -1,0 +1,17 @@
+{
+  "uid": "yoyaba-linkedin-hubspot-sync",
+  "name": "LinkedIn-HubSpot Sync",
+  "description": "Automatically sync LinkedIn ad performance data to HubSpot companies and contacts.",
+  "public": false,
+  "auth": {
+    "type": "oauth2",
+    "requiredScopes": [
+      "contacts",
+      "crm.objects.companies.read",
+      "crm.objects.companies.write"
+    ],
+    "redirectUrls": [
+      "https://linkedin-hubspot.yoyaba.com/oauth/hubspot/callback"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "app",
+  "label": "LinkedIn-HubSpot Sync App",
+  "description": "Main app component for LinkedIn-HubSpot sync integration",
+  "type": "app"
+}

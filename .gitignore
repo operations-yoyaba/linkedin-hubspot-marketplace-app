@@ -69,3 +69,6 @@ Thumbs.db
 # HubSpot specific
 .hsdev/
 .hsproject/
+
+# HubSpot config file
+hubspot.config.yml
