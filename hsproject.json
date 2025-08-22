@@ -1,0 +1,43 @@
+{
+  "name": "linkedin-hubspot-marketplace-app",
+  "version": "1.0.0",
+  "description": "LinkedIn-HubSpot Sync Marketplace App - OAuth proxy and webhook forwarding to main backend",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "hs project build",
+    "deploy": "hs project deploy",
+    "watch": "hs project watch",
+    "dev": "hs project dev",
+    "test": "jest",
+    "lint": "eslint src/**/*.js",
+    "clean": "hs project clean"
+  },
+  "keywords": [
+    "hubspot",
+    "linkedin",
+    "marketplace",
+    "oauth",
+    "sync",
+    "integration"
+  ],
+  "author": "Your Company",
+  "license": "MIT",
+  "dependencies": {
+    "@hubspot/api-client": "^9.0.0",
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5",
+    "express-rate-limit": "^7.1.5"
+  },
+  "devDependencies": {
+    "@hubspot/cli": "^1.0.0",
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
