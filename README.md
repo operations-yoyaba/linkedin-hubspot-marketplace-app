@@ -271,8 +271,8 @@ For support and questions:
 
 ## 🔗 Related Repositories
 
-- **Main Backend**: [linkedin-hubspot-sync](https://github.com/your-org/linkedin-hubspot-sync)
-- **Documentation**: [Project Wiki](https://github.com/your-org/linkedin-hubspot-marketplace-app/wiki)
+- **Main Backend**: [linkedin-hubspot-sync](https://github.com/operations-yoyaba/linkedin-hubspot-sync)
+- **Documentation**: [Project Wiki](https://github.com/operations-yoyaba/linkedin-hubspot-marketplace-app/wiki)
 
 ---
 

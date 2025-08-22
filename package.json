@@ -27,7 +27,7 @@
     "sync",
     "integration"
   ],
-  "author": "Your Company",
+  "author": "Yoyaba",
   "license": "MIT",
   "dependencies": {
     "@hubspot/api-client": "^9.0.0",
@@ -50,10 +50,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/linkedin-hubspot-marketplace-app.git"
+    "url": "https://github.com/operations-yoyaba/linkedin-hubspot-marketplace-app.git"
   },
   "bugs": {
-    "url": "https://github.com/your-org/linkedin-hubspot-marketplace-app/issues"
+    "url": "https://github.com/operations-yoyaba/linkedin-hubspot-marketplace-app/issues"
   },
-  "homepage": "https://github.com/your-org/linkedin-hubspot-marketplace-app#readme"
+  "homepage": "https://github.com/operations-yoyaba/linkedin-hubspot-marketplace-app#readme"
 }
