@@ -1,7 +1,7 @@
 {
   "uid": "yoyaba-linkedin-hubspot-sync",
-  "name": "Basic LinkedIn Hubspot Sync (Blihu)",
-  "description": "Automatically sync LinkedIn ad performance data to HubSpot companies and contacts.",
+  "name": "Basic LinkedIn HubSpot Sync (Blihu)",
+  "description": "Automatically sync LinkedIn engagement data to HubSpot companies.",
   "public": false,
   "auth": {
     "type": "oauth2",
