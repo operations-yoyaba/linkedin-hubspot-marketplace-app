@@ -6,7 +6,6 @@
   "auth": {
     "type": "oauth2",
     "requiredScopes": [
-      "contacts",
       "crm.objects.companies.read",
       "crm.objects.companies.write"
     ],
