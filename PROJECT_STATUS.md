@@ -73,13 +73,13 @@ A **HubSpot marketplace app** that enables automatic synchronization between Lin
 App ID:          18426623
 Client ID:       18426623
 Client Secret:   dfcbbbb721-7239-4ea1-8a60-6348c98f3d35
-Redirect URL:    https://linkedin-hubspot.yoyaba.com/oauth/hubspot/callback
+Redirect URL:    https://blihu.yoyaba.com/oauth/hubspot/callback
 OAuth Scopes:    crm.objects.companies.read, crm.objects.companies.write
 ```
 
 ### **Install URL (Current)**
 ```
-https://app-eu1.hubspot.com/oauth/authorize?client_id=18426623&redirect_uri=https://linkedin-hubspot.yoyaba.com/oauth/hubspot/callback&scope=crm.objects.companies.write%20crm.objects.companies.read
+https://app-eu1.hubspot.com/oauth/authorize?client_id=18426623&redirect_uri=https://blihu.yoyaba.com/oauth/hubspot/callback&scope=crm.objects.companies.write%20crm.objects.companies.read
 ```
 
 ### **⚠️ Important Note**
@@ -118,7 +118,7 @@ GET  /cards/company-mapping        # Company mapping interface card
 ```
 
 ### **2. Required Domain Configuration**
-- **Production Domain**: `linkedin-hubspot.yoyaba.com`
+- **Production Domain**: `blihu.yoyaba.com`
 - **SSL Certificate**: Required for OAuth flows (HubSpot requirement)
 - **DNS**: Must resolve to your Google Cloud Run service
 - **HTTPS**: All endpoints must be accessible via HTTPS
@@ -175,7 +175,7 @@ linkedin-hubspot-marketplace-app/
   "platformVersion": "2025.1",
   "env": {
     "NODE_ENV": "development",
-    "MAIN_BACKEND_URL": "https://linkedin-hubspot.yoyaba.com"
+    "MAIN_BACKEND_URL": "https://blihu.yoyaba.com"
   }
 }
 ```
@@ -195,7 +195,7 @@ linkedin-hubspot-marketplace-app/
       "crm.objects.companies.write"
     ],
     "redirectUrls": [
-      "https://linkedin-hubspot.yoyaba.com/oauth/hubspot/callback"
+              "https://blihu.yoyaba.com/oauth/hubspot/callback"
     ]
   }
 }
@@ -250,7 +250,7 @@ hs project list-builds      # List project builds
 
 #### **Priority 1: Backend Infrastructure**
 1. **Deploy main Python Flask backend** to Google Cloud Run
-2. **Configure domain** `linkedin-hubspot.yoyaba.com`
+2. **Configure domain** `blihu.yoyaba.com`
 3. **Set up SSL certificate** for HTTPS access
 4. **Configure Cloud SQL** for database operations
 5. **Set up Cloud Tasks** for background processing
@@ -305,10 +305,10 @@ hs project list-builds      # List project builds
 ### **Debug Commands**
 ```bash
 # Check app health
-curl https://linkedin-hubspot.yoyaba.com/health
+curl https://blihu.yoyaba.com/health
 
 # Test OAuth endpoints
-curl "https://linkedin-hubspot.yoyaba.com/oauth/hubspot/start?portalId=12345"
+curl "https://blihu.yoyaba.com/oauth/hubspot/start?portalId=12345"
 
 # Check HubSpot project status
 hs project open
@@ -375,7 +375,7 @@ hs project logs
 
 **This repository is complete and ready for backend integration.** The HubSpot marketplace app has been successfully deployed and configured with the correct OAuth scopes and redirect URLs.
 
-**Your next priority should be deploying the main Python Flask backend** to Google Cloud Run at the domain `linkedin-hubspot.yoyaba.com`. Once deployed, we can test the complete OAuth flow and webhook integration.
+**Your next priority should be deploying the main Python Flask backend** to Google Cloud Run at the domain `blihu.yoyaba.com`. Once deployed, we can test the complete OAuth flow and webhook integration.
 
 **The integration will be complete when:**
 1. ✅ Backend is deployed and accessible
@@ -391,3 +391,4 @@ hs project logs
 *Last Updated: August 22, 2025*  
 *Project Phase: 1.3 Complete, 1.4 In Progress*  
 *Status: Ready for Backend Integration*
+

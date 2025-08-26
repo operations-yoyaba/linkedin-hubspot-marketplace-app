@@ -7,8 +7,8 @@ This guide covers deploying the LinkedIn-HubSpot Sync marketplace app to HubSpot
 ### Required Accounts & Access
 - **HubSpot Developer Account**: Access to HubSpot developer portal
 - **HubSpot CLI**: Installed and authenticated (`@hubspot/cli`)
-- **Main Backend**: Deployed and accessible at `https://linkedin-hubspot.yoyaba.com`
-- **Domain**: DNS configured for `linkedin-hubspot.yoyaba.com`
+- **Main Backend**: Deployed and accessible at `https://blihu.yoyaba.com`
+- **Domain**: DNS configured for `blihu.yoyaba.com`
 
 ### Development Environment
 - Node.js 18+ installed
@@ -93,7 +93,7 @@ Set these in your HubSpot app configuration:
 | Variable | Value | Description |
 |----------|-------|-------------|
 | `NODE_ENV` | `production` | Production environment |
-| `MAIN_BACKEND_URL` | `https://linkedin-hubspot.yoyaba.com` | Main backend URL |
+| `MAIN_BACKEND_URL` | `https://blihu.yoyaba.com` | Main backend URL |
 | `HUBSPOT_CLIENT_ID` | Your HubSpot client ID | OAuth client ID |
 | `HUBSPOT_CLIENT_SECRET` | Your HubSpot client secret | OAuth client secret |
 
@@ -105,12 +105,12 @@ Update `src/public-app.json` with production URLs:
   "webhooks": [
     {
       "name": "app.install",
-      "url": "https://linkedin-hubspot.yoyaba.com/webhooks/hubspot/install"
+      "url": "https://blihu.yoyaba.com/webhooks/hubspot/install"
     }
   ],
   "urls": {
-    "auth": "https://linkedin-hubspot.yoyaba.com/oauth/hubspot/start",
-    "admin": "https://linkedin-hubspot.yoyaba.com/dashboard"
+    "auth": "https://blihu.yoyaba.com/oauth/hubspot/start",
+    "admin": "https://blihu.yoyaba.com/dashboard"
   }
 }
 ```
@@ -120,15 +120,15 @@ Update `src/public-app.json` with production URLs:
 ### 1. HubSpot OAuth Setup
 1. **Create OAuth app** in HubSpot developer portal
 2. **Set redirect URLs**:
-   - `https://linkedin-hubspot.yoyaba.com/oauth/hubspot/start`
-   - `https://linkedin-hubspot.yoyaba.com/oauth/hubspot/callback`
+   - `https://blihu.yoyaba.com/oauth/hubspot/start`
+   - `https://blihu.yoyaba.com/oauth/hubspot/callback`
 3. **Configure scopes** for required permissions
 4. **Get client ID and secret**
 
 ### 2. LinkedIn OAuth Setup
 1. **Create LinkedIn app** in LinkedIn developer portal
 2. **Set redirect URLs**:
-   - `https://linkedin-hubspot.yoyaba.com/oauth/linkedin/callback`
+   - `https://blihu.yoyaba.com/oauth/linkedin/callback`
 3. **Configure required permissions** for ad account access
 4. **Get client ID and secret**
 
@@ -137,9 +137,9 @@ Update `src/public-app.json` with production URLs:
 ### 1. HubSpot Webhooks
 Configure these webhook endpoints in HubSpot:
 
-- **App Install**: `https://linkedin-hubspot.yoyaba.com/webhooks/hubspot/install`
-- **App Uninstall**: `https://linkedin-hubspot.yoyaba.com/webhooks/hubspot/uninstall`
-- **Subscription Change**: `https://linkedin-hubspot.yoyaba.com/webhooks/hubspot/subscription`
+- **App Install**: `https://blihu.yoyaba.com/webhooks/hubspot/install`
+- **App Uninstall**: `https://blihu.yoyaba.com/webhooks/hubspot/uninstall`
+- **Subscription Change**: `https://blihu.yoyaba.com/webhooks/hubspot/subscription`
 
 ### 2. Webhook Security
 - **Signature verification** is handled by main backend
@@ -149,12 +149,12 @@ Configure these webhook endpoints in HubSpot:
 ## 🎨 UI Cards Configuration
 
 ### 1. Sync Status Card
-- **Endpoint**: `https://linkedin-hubspot.yoyaba.com/cards/sync-status`
+- **Endpoint**: `https://blihu.yoyaba.com/cards/sync-status`
 - **Purpose**: Display sync progress and recent activity
 - **Integration**: Embedded in HubSpot interface
 
 ### 2. Company Mapping Card
-- **Endpoint**: `https://linkedin-hubspot.yoyaba.com/cards/company-mapping`
+- **Endpoint**: `https://blihu.yoyaba.com/cards/company-mapping`
 - **Purpose**: Manage LinkedIn to HubSpot company mappings
 - **Integration**: Embedded in HubSpot interface
 

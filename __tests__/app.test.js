@@ -21,7 +21,7 @@ describe('HubSpot Marketplace App', () => {
         .query({ portalId })
         .expect(302);
       
-      expect(response.headers.location).toContain('linkedin-hubspot.yoyaba.com');
+      expect(response.headers.location).toContain('blihu.yoyaba.com');
       expect(response.headers.location).toContain(`portalId=${portalId}`);
     });
 
@@ -45,7 +45,7 @@ describe('HubSpot Marketplace App', () => {
         .query({ code, state, portalId })
         .expect(302);
       
-      expect(response.headers.location).toContain('linkedin-hubspot.yoyaba.com');
+      expect(response.headers.location).toContain('blihu.yoyaba.com');
       expect(response.headers.location).toContain(`code=${code}`);
       expect(response.headers.location).toContain(`state=${state}`);
       expect(response.headers.location).toContain(`portalId=${portalId}`);
@@ -84,7 +84,7 @@ describe('HubSpot Marketplace App', () => {
       
       expect(response.body).toHaveProperty('status', 'forwarded');
       expect(global.fetch).toHaveBeenCalledWith(
-        'https://linkedin-hubspot.yoyaba.com/webhooks/hubspot/install',
+        'https://blihu.yoyaba.com/webhooks/hubspot/install',
         expect.objectContaining({
           method: 'POST',
           body: JSON.stringify(webhookData)
@@ -103,7 +103,7 @@ describe('HubSpot Marketplace App', () => {
         .query({ portalId, userId })
         .expect(302);
       
-      expect(response.headers.location).toContain('linkedin-hubspot.yoyaba.com');
+      expect(response.headers.location).toContain('blihu.yoyaba.com');
       expect(response.headers.location).toContain(`portalId=${portalId}`);
       expect(response.headers.location).toContain(`userId=${userId}`);
     });

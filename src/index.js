@@ -40,7 +40,7 @@ app.get('/oauth/hubspot/start', (req, res) => {
   }
 
   // Redirect to main backend OAuth flow
-  const redirectUrl = `https://linkedin-hubspot.yoyaba.com/oauth/hubspot/start?portalId=${portalId}&state=${state || ''}`;
+  const redirectUrl = `https://blihu.yoyaba.com/oauth/hubspot/start?portalId=${portalId}&state=${state || ''}`;
   
   console.log(`OAuth initiation for portal ${portalId}, redirecting to: ${redirectUrl}`);
   
@@ -56,7 +56,7 @@ app.get('/oauth/hubspot/callback', (req, res) => {
   }
 
   // Redirect to main backend OAuth callback
-  const redirectUrl = `https://linkedin-hubspot.yoyaba.com/oauth/hubspot/callback?code=${code}&state=${state || ''}&portalId=${portalId}`;
+  const redirectUrl = `https://blihu.yoyaba.com/oauth/hubspot/callback?code=${code}&state=${state || ''}&portalId=${portalId}`;
   
   console.log(`OAuth callback for portal ${portalId}, redirecting to: ${redirectUrl}`);
   
@@ -71,7 +71,7 @@ app.post('/webhooks/hubspot/install', async (req, res) => {
     console.log(`App install webhook received for portal ${portalId}`);
     
     // Forward webhook to main backend
-    const response = await fetch('https://linkedin-hubspot.yoyaba.com/webhooks/hubspot/install', {
+    const response = await fetch('https://blihu.yoyaba.com/webhooks/hubspot/install', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ app.post('/webhooks/hubspot/uninstall', async (req, res) => {
     console.log(`App uninstall webhook received for portal ${portalId}`);
     
     // Forward webhook to main backend
-    const response = await fetch('https://linkedin-hubspot.yoyaba.com/webhooks/hubspot/uninstall', {
+    const response = await fetch('https://blihu.yoyaba.com/webhooks/hubspot/uninstall', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ app.post('/webhooks/hubspot/subscription', async (req, res) => {
     console.log(`Subscription change webhook received for portal ${portalId}`);
     
     // Forward webhook to main backend
-    const response = await fetch('https://linkedin-hubspot.yoyaba.com/webhooks/hubspot/subscription', {
+    const response = await fetch('https://blihu.yoyaba.com/webhooks/hubspot/subscription', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ app.get('/cards/sync-status', (req, res) => {
   const { portalId, userId } = req.query;
   
   // Redirect to main backend card endpoint
-  const redirectUrl = `https://linkedin-hubspot.yoyaba.com/cards/sync-status?portalId=${portalId}&userId=${userId}`;
+  const redirectUrl = `https://blihu.yoyaba.com/cards/sync-status?portalId=${portalId}&userId=${userId}`;
   
   res.redirect(redirectUrl);
 });
@@ -165,7 +165,7 @@ app.get('/cards/company-mapping', (req, res) => {
   const { portalId, userId } = req.query;
   
   // Redirect to main backend card endpoint
-  const redirectUrl = `https://linkedin-hubspot.yoyaba.com/cards/company-mapping?portalId=${portalId}&userId=${userId}`;
+  const redirectUrl = `https://blihu.yoyaba.com/cards/company-mapping?portalId=${portalId}&userId=${userId}`;
   
   res.redirect(redirectUrl);
 });
@@ -185,7 +185,7 @@ app.use('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`HubSpot Marketplace App server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`Main backend: https://linkedin-hubspot.yoyaba.com`);
+  console.log(`Main backend: https://blihu.yoyaba.com`);
 });
 
 module.exports = app;

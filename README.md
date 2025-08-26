@@ -112,7 +112,7 @@ The app implements a **proxy OAuth pattern**:
 
 1. **User installs app** from HubSpot marketplace
 2. **HubSpot redirects** to `/oauth/hubspot/start` with `portalId`
-3. **App redirects** to main backend: `https://linkedin-hubspot.yoyaba.com/oauth/hubspot/start`
+3. **App redirects** to main backend: `https://blihu.yoyaba.com/oauth/hubspot/start`
 4. **Main backend handles** LinkedIn OAuth and data setup
 5. **User completes setup** and returns to HubSpot
 
@@ -139,7 +139,7 @@ The app provides **UI cards** for HubSpot interface:
 |----------|-------------|---------|
 | `NODE_ENV` | Environment (development/production) | `development` |
 | `PORT` | Server port | `3000` |
-| `MAIN_BACKEND_URL` | Main backend URL | `https://linkedin-hubspot.yoyaba.com` |
+| `MAIN_BACKEND_URL` | Main backend URL | `https://blihu.yoyaba.com` |
 | `HUBSPOT_CLIENT_ID` | HubSpot OAuth client ID | - |
 | `HUBSPOT_CLIENT_SECRET` | HubSpot OAuth client secret | - |
 

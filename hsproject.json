@@ -9,6 +9,6 @@
   "platformVersion": "2025.1",
   "env": {
     "NODE_ENV": "development",
-    "MAIN_BACKEND_URL": "https://linkedin-hubspot.yoyaba.com"
+    "MAIN_BACKEND_URL": "https://blihu.yoyaba.com"
   }
 }
