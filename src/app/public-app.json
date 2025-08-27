@@ -7,7 +7,8 @@
     "type": "oauth2",
     "requiredScopes": [
       "crm.objects.companies.read",
-      "crm.objects.companies.write"
+      "crm.objects.companies.write",
+      "crm.schemas.companies.write"
     ],
     "redirectUrls": [
               "https://blihu.yoyaba.com/oauth/hubspot/callback"
